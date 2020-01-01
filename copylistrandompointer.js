@@ -2,6 +2,10 @@ var copyRandomList = function(head) {
     let dic = new Map()
     dic.set(null, null)
 
+    if (!head) {
+        return null
+    }
+
     let curr = head
     while (curr) {
         dic.set(curr, new Node(curr.val, null, null))
